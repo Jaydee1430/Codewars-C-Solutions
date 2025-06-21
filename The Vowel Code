@@ -1,0 +1,36 @@
+public static class VowelCode
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine(Encode("hello"));
+    }
+    public static string Encode(string msg)
+    {
+        string sen = msg;
+        string[] vowels = { "a", "e", "i", "o", "u"};
+        string[] nums = { "1", "2", "3", "4", "5"};
+        for (int x = 0; x < vowels.Length; x++)
+        {
+            if (sen.Contains(vowels[x]))
+            {
+                sen = sen.Replace(vowels[x], nums[x]);
+            }
+        }
+        return sen;
+    }
+
+    public static string Decode(string msg)
+    {
+        string sen = msg;
+        string[] vowels = { "a", "e", "i", "o", "u" };
+        string[] nums = { "1", "2", "3", "4", "5" };
+        for (int x = 0; x < vowels.Length; x++)
+        {
+            if (sen.Contains(nums[x]))
+            {
+                sen = sen.Replace(nums[x], vowels[x]);
+            }
+        }
+        return sen;
+    }
+}
