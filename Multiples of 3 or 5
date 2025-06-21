@@ -1,0 +1,27 @@
+using System.Collections.Generic;
+public static class Kata
+{
+    public static int Solution(int value)
+    {
+        List<int> array = new List<int>();
+        int num = 1;
+        int result = 0;
+
+        if (value < 0) {
+            return 0;
+        }
+        for (int x = 0; x < value-1; x++)
+        {
+            if (num % 3 == 0 || num % 5 == 0)
+            {
+                array.Add(num);
+            }
+            num++;
+        }
+        for (int x = 0; x < array.Count; x++)
+        {
+            result = result + array[x];
+        }
+        return result;
+    }
+}
