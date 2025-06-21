@@ -1,9 +1,5 @@
 public static class VowelCode
 {
-    public static void Main(string[] args)
-    {
-        Console.WriteLine(Encode("hello"));
-    }
     public static string Encode(string msg)
     {
         string sen = msg;
